@@ -11,11 +11,19 @@ const Header = () => {
         loggedData.setLoggedUser(null)
         navigate("/login")
     }
+    function home(){
+      navigate("/track")
+  }
+  function diet(){
+    navigate("/diet")
+}
   return (
     <>
         <ul className='flex  justify-evenly'>
-            <li className='text-3xl text-white' >Home</li>
+            <li className='text-3xl text-white' onClick={home} >Home</li>
+            <li className='text-3xl text-white' onClick={diet} >Diet</li>
             <li className='text-3xl text-white'  onClick={logout}>Logout</li>
+            
         </ul>
     </>
   )
